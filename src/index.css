@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-float: float 4s ease-in-out infinite;
+  --animate-swing: swing 1.2s ease-in-out ease-out;
+  --animate-fade-in: fadeIn 0.25s ease-out forwards;
+  --animate-zoom-in: zoomIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  --animate-slide-in: slideIn 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-video-loop: videoFadeLoop 16s ease-in-out infinite;
+  --animate-video-cook-loop: videoCookLoop 10s ease-in-out infinite;
+
+  @keyframes videoFadeLoop {
+    0%, 100% {
+      opacity: 0.52;
+      transform: scale(1.02);
+    }
+    50% {
+      opacity: 0.58;
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes videoCookLoop {
+    0%, 100% {
+      opacity: 0.85;
+    }
+    50% {
+      opacity: 0.95;
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes swing {
+    0%, 100% {
+      transform: rotate(0);
+    }
+    20% {
+      transform: rotate(10deg);
+    }
+    40% {
+      transform: rotate(-10deg);
+    }
+    60% {
+      transform: rotate(6deg);
+    }
+    80% {
+      transform: rotate(-6deg);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+}
+
+/* 3D Spin Carousel Keyframes and Utilities */
+@keyframes spinY3D {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.animate-spin-3d-kitty {
+  animation: spinY3D 8s linear infinite;
+  animation-delay: 0s;
+}
+
+.animate-spin-3d-melody {
+  animation: spinY3D 8s linear infinite;
+  animation-delay: 1s;
+}
+
+.animate-spin-3d-kuromi {
+  animation: spinY3D 8s linear infinite;
+  animation-delay: 2s;
+}
+
+/* Custom Scrollbar styled wrapper */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Hello Kitty World",
+  "description": "An immersive, interactive digital playground exploring the heartwarming universe of Hello Kitty & Friends, featuring character guidebooks, seasonal shops, interactive Puroland trip planners, and member club reward trackers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
